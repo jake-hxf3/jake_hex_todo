@@ -192,13 +192,13 @@ header {
     display: none;
 }
 
-.list-items label::after {
+.list-items li label::after {
     content: " 👏 ";
     display: none;
     font-size: 20px;
 }
 
-.list-items input[type="checkbox"]:checked + label::after {
+.list-items li input[type="checkbox"]:checked + label::after {
     display: inline;
     text-decoration: none;
 }
