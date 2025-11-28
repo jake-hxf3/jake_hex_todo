@@ -156,8 +156,14 @@ header {
 .list-items li {
     cursor: pointer;
 }
-.list-items li:nth-child(odd){
+#future-list .list-items li:nth-child(odd){
     background-color: rgba(0, 128, 0, 0.344);
+}
+#current-list .list-items li:nth-child(odd){
+    background-color: rgba(255, 166, 0, 0.344);
+}
+#past-list .list-items li:nth-child(odd){
+    background-color: rgba(140, 0, 255, 0.344);
 }
 
 .list-items input[type="checkbox"]:checked + label {
