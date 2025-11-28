@@ -8,39 +8,138 @@
 </head>
 <body>
   <header>
-    <div class="desk-grid-con">
-      <section id="main-title" class="box col-span-3">
-        <h1>To Do List</h1>      
-      </section>
+    <section class="desk-grid-con">
+      <div id="main-title" class="col-span-full">
+        <h1>To Do List</h1>
+      </div>
 
-      <div id="login" class="box col-start-11 col-end-13">
-        <p>Login</p>      
-      </div>      
-    </div>
+      <div id="header-misc" class="col-span-full">
+        <a href="#" class="burger">
+          <img src="images/burger.svg" class="burger-icon" alt="Burger Menu Icon">
+        </a>
+        <div id="login">
+          <a href="#" class="button b1">Install</a>  
+          <a href="#" class="button">Login</a>     
+        </div> 
+      </div>
+    </section>
   </header>
 
   <main>
-    <section id="intro" class="box desk-grid-full">
-      <h2>Welcome</h2>
-      <p>Short Instruction</p>
+    <section id="intro" class="desk-grid-full">
+      <h2>Welcome to your To Do List</h2>
+      <p>The simpler way to get things done.<br>
+      Add your task using the box below, or start checking off your items.<br>
+      You'll be glad you finished them sooner!</p>
       <search>
-        <form action="get" id="email-form">
-          <label class="hidden" for="email">Add A Task:</label>
-          <input type="text" id="email" name="fname" placeholder="Your Task Name">
-          <input type="submit" value="➔">
+        <form action="get" id="task-form">
+          <label class="hidden" for="task">Add A Task:</label>
+          <input type="text" id="task" name="task-add" placeholder="Your Task Name">
+          <input type="submit" value="+">
         </form>       
       </search>
     </section>
 
     <section id="todo" class="desk-grid-con">
-      <section id="future-list" class="box col-span-4">
-        <p>Future List</p>
+      <section id="future-list" class="list col-span-4">
+        <h3>Future List</h3>
+        <ul class="list-items">
+          <li>
+            <input type="checkbox" id="fd-01" name="todo">
+            <label for="fd-01">To-do1</label>
+          </li>
+          <li>
+            <input type="checkbox" id="fd-02" name="todo">
+            <label for="fd-02">To-do2</label>
+          </li>
+          <li>
+            <input type="checkbox" id="fd-03" name="todo">
+            <label for="fd-03">To-do3</label>
+          </li>
+          <li>
+            <input type="checkbox" id="fd-04" name="todo">
+            <label for="fd-04">To-do4</label>
+          </li>
+          <li>
+            <input type="checkbox" id="fd-05" name="todo">
+            <label for="fd-05">To-do5</label>
+          </li>
+          <li>
+            <input type="checkbox" id="fd-06" name="todo">
+            <label for="fd-06">To-do6</label>
+          </li>
+          <li>
+            <input type="checkbox" id="fd-07" name="todo">
+            <label for="fd-07">To-do7</label>
+          </li>
+        </ul>
       </section>
-        <section id="current-list" class="box col-span-4">
-        <p>Current List</p>
+
+      <section id="current-list" class="list col-span-4">
+        <h3>Present List</h3>
+        <ul class="list-items">
+          <li>
+            <input type="checkbox" id="td-01" name="todo">
+            <label for="td-01">To-do1</label>
+          </li>
+          <li>
+            <input type="checkbox" id="td-02" name="todo">
+            <label for="td-02">To-do2</label>
+          </li>
+          <li>
+            <input type="checkbox" id="td-03" name="todo">
+            <label for="td-03">To-do3</label>
+          </li>
+          <li>
+            <input type="checkbox" id="td-04" name="todo">
+            <label for="td-04">To-do4</label>
+          </li>
+          <li>
+            <input type="checkbox" id="td-05" name="todo">
+            <label for="td-05">To-do5</label>
+          </li>
+          <li>
+            <input type="checkbox" id="td-06" name="todo">
+            <label for="td-06">To-do6</label>
+          </li>
+          <li>
+            <input type="checkbox" id="td-07" name="todo">
+            <label for="td-07">To-do7</label>
+          </li>
+        </ul>
       </section>
-      <section id="past-list" class="box col-span-4">
-        <p>Past List</p>
+      <section id="past-list" class="list col-span-4">
+        <h3>Past List</h3>
+        <ul class="list-items">
+          <li>
+            <input type="checkbox" id="pd-01" name="todo">
+            <label for="pd-01">To-do1</label>
+          </li>
+          <li>
+            <input type="checkbox" id="pd-02" name="todo">
+            <label for="pd-02">To-do2</label>
+          </li>
+          <li>
+            <input type="checkbox" id="pd-03" name="todo">
+            <label for="pd-03">To-do3</label>
+          </li>
+          <li>
+            <input type="checkbox" id="pd-04" name="todo">
+            <label for="pd-04">To-do4</label>
+          </li>
+          <li>
+            <input type="checkbox" id="pd-05" name="todo">
+            <label for="pd-05">To-do5</label>
+          </li>
+          <li>
+            <input type="checkbox" id="pd-06" name="todo">
+            <label for="pd-06">To-do6</label>
+          </li>
+          <li>
+            <input type="checkbox" id="pd-07" name="todo">
+            <label for="pd-07">To-do7</label>
+          </li>
+        </ul>
       </section>
       <section id="instruct" class="box col-span-full">
         <p>Instructions goes here</p>
