@@ -184,4 +184,17 @@ header {
 .list-items input[type="checkbox"]:checked::after {
     content: " 👏 ";
     font-size: 20px;
+
+}
+
+/* Footer */
+#social-media{
+   text-align: center;
+   margin: 0 auto;
+}
+
+.sm-icons{
+   display: flex;
+   font-size: 28px;
+   justify-content: space-evenly;
 }
