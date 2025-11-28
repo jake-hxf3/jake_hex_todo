@@ -1,12 +1,13 @@
-# Project Name
+# To Do List
 ![insert alt text](images/example.jpg)
 
-This is a project about [insert topic].
+This is a project about a cool looking To Do List.
 
 ## Installation 💻
 No installation required, simply download the zip file and extract.
 ## Usage
-Open index.html in the browser of your choice and watch our debate.
+Add a task to the to do list by using the search bar.
+Check and cross out a task by clicking on it.
 
 ## Contributing 
 1. Fork it!
