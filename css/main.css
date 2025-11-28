@@ -168,4 +168,9 @@ header {
 
 .list-items input[type="checkbox"]:checked + label {
     text-decoration: line-through;
+    background-color: blue;
+}
+
+.list-items input[type="checkbox"]:checked + label::after {
+    content: "👏";
 }
