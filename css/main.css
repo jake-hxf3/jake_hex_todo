@@ -1,3 +1,22 @@
-.hidden{
-    display: none;
+/* Font Styling */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Styling */
+body{
+   margin: 0;
+   padding: 0;
+   font-family: 'Montserrat', Helvetica, sans-serif;
+   font-size: 14px;
+   font-weight: 450;
+}
+
+/* Header */
+header {
+    background-color: mediumpurple;
+    color: white;
+}
+
+main{
+    background-image: url(../images/background.jpg);
+    background-size: contain;
 }

@@ -2,10 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>To Do List</title>
 </head>
 <body>
-    
+  <header>
+    <div class="desk-grid-con">
+      <section id="main-title" class="box col-span-3">
+        <h1>To Do List</h1>      
+      </section>
+
+      <div id="login" class="box col-start-11 col-end-13">
+        <p>Login</p>      
+      </div>      
+    </div>
+  </header>
+
+  <main>
+    <section id="intro" class="box desk-grid-full">
+      <h2>Welcome</h2>
+      <p>Short Instruction</p>
+      <search>
+        <form action="get" id="email-form">
+          <label class="hidden" for="email">Add A Task:</label>
+          <input type="text" id="email" name="fname" placeholder="Your Task Name">
+          <input type="submit" value="➔">
+        </form>       
+      </search>
+    </section>
+
+    <section id="todo" class="desk-grid-con">
+      <section id="future-list" class="box col-span-4">
+        <p>Future List</p>
+      </section>
+        <section id="current-list" class="box col-span-4">
+        <p>Current List</p>
+      </section>
+      <section id="past-list" class="box col-span-4">
+        <p>Past List</p>
+      </section>
+      <section id="instruct" class="box col-span-full">
+        <p>Instructions goes here</p>
+      </section>
+    </section>
+
+
+  </main>
+
+  <footer class="box desk-grid-full">
+    <div id="social-media">
+      <p>Social Media</p>
+    </div>
+  </footer>
 </body>
 </html>
