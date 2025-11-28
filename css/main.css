@@ -169,3 +169,19 @@ header {
 .list-items input[type="checkbox"]:checked + label {
     text-decoration: line-through;
 }
+
+#future-list li:has(input[type="checkbox"]:checked){
+    background-color: orange;
+}
+#current-list li:has(input[type="checkbox"]:checked){
+    background-color: violet;
+}
+#past-list li:has(input[type="checkbox"]:checked){
+    display: none;
+}
+
+
+.list-items input[type="checkbox"]:checked::after {
+    content: " 👏 ";
+    font-size: 20px;
+}
