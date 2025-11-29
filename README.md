@@ -1,5 +1,5 @@
 # To Do List
-![insert alt text](images/example.jpg)
+![background with task books](images/background.jpg)
 
 This is a project about a cool looking To Do List.
 
