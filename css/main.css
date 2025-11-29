@@ -12,7 +12,7 @@ body{
 
 main{
     background-image: url(../images/background.jpg);
-    background-size: contain;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.589);
     background-blend-mode: multiply;
     background-repeat: none;
@@ -20,6 +20,10 @@ main{
     padding-top: 50px;
     padding-bottom: 50px;
     margin: 0;
+}
+
+h1 {
+    font-size: 36px;
 }
 
 h2 {
@@ -36,6 +40,7 @@ ul {
 a {
     color: inherit;
     text-decoration: none;
+    transition: all 0.5s linear;
 }
 
 .button {
@@ -128,21 +133,10 @@ header {
       color: mediumslateblue;
    }
 
-/* Todo Section */
+/* Todo Lists */
 .list {
     border: 5px solid green;
     border-radius: 5px;
-}
-
-#future-list {
-    border-color: lime;
-}
-    
-#current-list {
-    border-color: orange;
-}
-#past-list {
-    border-color: violet;
 }
 
 .list h3{
@@ -151,50 +145,85 @@ header {
     margin-bottom: 10px;
 }
 
+.future {
+    border-color: lime;
+}
+    
+.current {
+    border-color: orange;
+}
+.past {
+    border-color: violet;
+}
+
 .list-items {
     line-height: 30px;
 }
-.list-items li {
-    cursor: pointer;
-}
-#future-list .list-items li:nth-child(odd){
+    .list-items li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s linear;
+    }
+        .list-items li input {
+            display: block;
+            width: 20px;
+            margin-left: 10px;
+        }
+        .list-items li label {
+            display: block;
+            margin-left: 5px;
+            width: 100%;
+        }
+        .list-items li:hover {
+            color: rgb(182, 255, 255);
+        }
+
+/* specific list item color*/
+.future .list-items li:nth-child(odd){
     background-color: rgba(0, 128, 0, 0.344);
 }
-#current-list .list-items li:nth-child(odd){
+.current .list-items li:nth-child(odd){
     background-color: rgba(255, 166, 0, 0.344);
 }
-#past-list .list-items li:nth-child(odd){
+.past .list-items li:nth-child(odd){
     background-color: rgba(140, 0, 255, 0.344);
 }
 
+
+/* checked states of list */
 .list-items input[type="checkbox"]:checked + label {
     text-decoration: line-through;
 }
 
-#future-list li:has(input[type="checkbox"]:checked){
+.future li:has(input[type="checkbox"]:checked){
     background-color: orange;
 }
-#current-list li:has(input[type="checkbox"]:checked){
+.current li:has(input[type="checkbox"]:checked){
     background-color: violet;
 }
-#past-list li:has(input[type="checkbox"]:checked){
+.past li:has(input[type="checkbox"]:checked){
     display: none;
 }
 
 
-.list-items input[type="checkbox"]:checked::after {
+.list-items li:has(input[type="checkbox"]:checked)::after {
+    display: block;
+    margin-right: 5px;
     content: " 👏 ";
+    text-decoration: none;
     font-size: 20px;
 }
 
+
 /* Footer */
 footer{
-    background-color: violet;
+    background-color: mediumslateblue;
     padding: 30px 0;
 }
 #social-media{
    text-align: center;
-   margin: 0 auto;
+   margin: 2px auto;
 }
 #social-media h2{
     font-size: 20px;
