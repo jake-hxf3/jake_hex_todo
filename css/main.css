@@ -15,6 +15,7 @@ main{
     background-size: contain;
     background-color: rgba(0, 0, 0, 0.589);
     background-blend-mode: multiply;
+    background-repeat: none;
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -211,3 +212,4 @@ footer{
 .sm-icons a:hover{
     color: cyan;
 }
+
