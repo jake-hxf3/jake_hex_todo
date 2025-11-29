@@ -135,7 +135,7 @@ header {
 
 /* Todo Lists */
 .list {
-    border: 4.5px solid green;
+    border: 5px solid green;
     border-radius: 5px;
 }
 
@@ -184,13 +184,13 @@ header {
 
 /* specific list item color*/
 .future .list-items li:nth-child(odd){
-    background-color: rgba(0, 128, 0, 0.344);
+    background-color: rgba(0, 168, 0, 0.35);
 }
 .current .list-items li:nth-child(odd){
-    background-color: rgba(255, 166, 0, 0.344);
+    background-color: rgba(255, 168, 0, 0.35);
 }
 .past .list-items li:nth-child(odd){
-    background-color: rgba(140, 0, 255, 0.344);
+    background-color: rgba(140, 0, 255, 0.35);
 }
 
 
