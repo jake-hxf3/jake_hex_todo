@@ -223,7 +223,7 @@ footer{
 }
 #social-media{
    text-align: center;
-   margin: 0 auto;
+   margin: 2px auto;
 }
 #social-media h2{
     font-size: 20px;
@@ -241,3 +241,4 @@ footer{
 .sm-icons a:hover{
     color: cyan;
 }
+
