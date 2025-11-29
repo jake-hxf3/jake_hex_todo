@@ -142,7 +142,7 @@ header {
 .list h3{
     line-height: 36px;
     padding-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .future {
@@ -158,12 +158,15 @@ header {
 
 .list-items {
     line-height: 30px;
+    height: 265px;
+    overflow: hidden;
 }
     .list-items li {
         display: flex;
         align-items: center;
         cursor: pointer;
         transition: all 0.5s linear;
+        z-index: 2;
     }
         .list-items li input {
             display: block;
@@ -197,13 +200,15 @@ header {
 }
 
 .future li:has(input[type="checkbox"]:checked){
-    background-color: orange;
+    background-color: rgb(255, 132, 0);
+    animation: checkedout 0.5s linear 0.5s forwards;
 }
 .current li:has(input[type="checkbox"]:checked){
     background-color: violet;
+    animation: checkedout 0.5s linear 0.5s forwards;
 }
 .past li:has(input[type="checkbox"]:checked){
-    display: none;
+    animation: checkedout 1.0s linear 0s forwards;
 }
 
 
@@ -215,6 +220,24 @@ header {
     font-size: 20px;
 }
 
+    /* animations */
+@keyframes checkedout {
+    0% {
+        visibility: visible;
+        opacity: 100%;
+    }
+
+    50% {
+        visibility: hidden;
+        opacity: 0%;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        visibility: hidden;
+        max-height: 0;
+    }
+}
 
 /* Footer */
 footer{
