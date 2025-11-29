@@ -185,3 +185,29 @@ header {
     content: " 👏 ";
     font-size: 20px;
 }
+
+/* Footer */
+footer{
+    background-color: violet;
+    padding: 30px 0;
+}
+#social-media{
+   text-align: center;
+   margin: 0 auto;
+}
+#social-media h2{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.sm-icons{
+   display: flex;
+   font-size: 28px;
+   justify-content: space-evenly;
+}
+
+.sm-icons a:hover{
+    color: cyan;
+}
