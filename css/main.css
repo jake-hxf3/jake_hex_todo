@@ -135,7 +135,7 @@ header {
 
 /* Todo Lists */
 .list {
-    border: 5px solid green;
+    border: 4.5px solid green;
     border-radius: 5px;
 }
 
@@ -159,7 +159,7 @@ header {
 .list-items {
     line-height: 30px;
     height: 265px;
-    overflow: hidden;
+    overflow-y: hidden;
 }
     .list-items li {
         display: flex;
