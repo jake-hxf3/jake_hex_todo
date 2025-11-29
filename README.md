@@ -17,7 +17,11 @@ Check and cross out a task by clicking on it.
 5. Submit a pull request :D
 
 ## History
-TODO: Write history
+2025/11/28: Uploaded the repo into GitHub
+2025/11/28: Added some emojis and some social media links
+2025/11/28: Fixed emoji positions
+2025/11/29: Added cool animations once item is checked
+
 ## Credits
 Jake
 ## License
