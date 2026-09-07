@@ -1,0 +1,44 @@
+const searchBox = document.querySelector("#task-form");
+
+const lists = document.querySelectorAll(".list-items");
+const temp = document.querySelector("template");
+
+let taskIndex = 0;
+
+
+function addItem() {
+    let searchBar = document.querySelector("#task");
+    let taskName = searchBar.value;
+
+    taskIndex++;
+    let taskId = `${taskName}-${taskIndex}`;
+
+    let listItem = temp.content.cloneNode(true);
+    listItem.querySelector("input").id = taskId;
+    listItem.querySelector("label").htmlFor = taskId;
+    listItem.querySelector("label").textContent = taskName;
+
+    lists[0].appendChild(listItem);
+
+    console.log("an item was added");
+}
+
+lists.forEach((list, index) => {
+    list.addEventListener("animationend", (e) => {
+        if (e.target.tagName === "LI") {
+            let checkbox = e.target.querySelector("input");
+            if (checkbox.checked === true) {
+                if (index < 2){
+                    let newItem = e.target.cloneNode(true);
+                    newItem.querySelector("input").checked = false;
+                    lists[index+1].prepend(newItem);
+                }
+
+                e.target.remove();
+                    
+            }
+        }
+    })
+})
+
+

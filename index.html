@@ -9,41 +9,42 @@
 </head>
 <body>
   <header>
-    <section class="desk-grid-con">
-      <div id="main-title" class="col-span-full">
-        <h1>To Do List</h1>
-      </div>
-
-      <div id="header-misc" class="col-span-full">
+    <section class="grid-con center-grid-con">
+      <div id="header-misc" class="col-start-1 col-end-2 m-col-span-1">
         <a href="#" class="burger">
           <img src="images/burger.svg" class="burger-icon" alt="Burger Menu Icon">
         </a>
-        <div id="login">
-          <a href="#" class="button b1">Install</a>  
-          <a href="#" class="button">Login</a>     
-        </div> 
       </div>
+
+      <div id="main-title" class="col-span-full m-col-start-5 m-col-end-9">
+        <h1>To Do List</h1>
+      </div>
+      
+      <div id="login" class="col-start-2 col-end-4 m-col-start-10 m-col-end-13">
+        <a href="#" class="button b1">Install</a>  
+        <a href="#" class="button">Login</a>     
+      </div> 
     </section>
   </header>
 
   <main>
-    <section id="intro" class="desk-grid-full">
+    <section id="intro" class="auto-grid-con">
       <h2>Welcome to your To Do List</h2>
       <p>The simpler way to get things done.<br>
       Add your task using the box below, or start checking off your items.<br>
-      You'll be glad you've finished them sooner!</p>
+      <span>Shame you haven't finished them sooner</span></p>
       <search>
-        <form id="task-form">
+        <form action="javascript:;" id="task-form" onsubmit="addItem()">
           <label class="hidden" for="task">Add A Task:</label>
-          <input type="text" id="task" maxlength="60" name="task-add" placeholder="Your Task Name">
-          <input type="submit" value="+">
+          <input type="text" id="task" name="task" maxlength="60" required="required" placeholder="Add Something Before You Bore to Death">
+          <input type="submit" id="task-submit" value="+">
         </form>       
       </search>
     </section>
 
-    <section id="todo" class="desk-grid-con">
+    <section id="todo" class="grid-con center-grid-con">
       <h2 class="hidden">The Sorted To Do Lists</h2>
-      <section class="list future col-span-4">
+      <section class="list col-span-4" id="future">
         <h3>🔜 Future Tasks</h3>
         <ul class="list-items">
           <li>
@@ -58,26 +59,10 @@
             <input type="checkbox"  id="fd-03">
             <label for="fd-03">To-do3</label>
           </li>
-          <li>
-            <input type="checkbox"  id="fd-04">
-            <label for="fd-04">To-do4</label>
-          </li>
-          <li>
-            <input type="checkbox"  id="fd-05">
-            <label for="fd-05">To-do5</label>
-          </li>
-          <li>
-            <input type="checkbox"  id="fd-06">
-            <label for="fd-06">To-do6</label>
-          </li>
-          <li>
-            <input type="checkbox"  id="fd-07">
-            <label for="fd-07">To-do7</label>
-          </li>
         </ul>
       </section>
 
-      <section class="list current col-span-4">
+      <section class="list col-span-4" id="current">
         <h3>👨‍💻 In Progress</h3>
         <ul class="list-items">
           <li>
@@ -95,7 +80,7 @@
         </ul>
       </section>
       
-      <section class="list past col-span-4">
+      <section class="list col-span-4" id="past">
         <h3>⏪ Completed!</h3>
         <ul class="list-items">
           <li>
@@ -115,7 +100,7 @@
     </section>
   </main>
 
-  <footer class="desk-grid-full">
+  <footer class="auto-grid-con">
     <section id="social-media">
       <h2>Social Media</h2>
         <ul class="sm-icons">
@@ -134,5 +119,14 @@
         </ul>
     </section>
   </footer>
+
+  <template>
+    <li>
+      <input type="checkbox" id="ld-01">
+      <label for="ld-01">To-do1</label>
+    </li>
+  </template>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

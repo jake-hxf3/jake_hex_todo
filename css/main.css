@@ -64,16 +64,15 @@ header {
 
 #header-misc {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     grid-row: 1/1;
 }
 
 #login {
+    display: none;
     width: fit-content;
-    display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 30px auto 0;
 }
 
 .b1 {
@@ -101,8 +100,14 @@ header {
     line-height: 25px;
 }
 
+#intro p span {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    line-height: 5ch;
+}
+
 #task-form{
-   width: 50%;
+   width: 90%;
    margin: 25px auto 0;
    display: grid;
    grid-template-columns: 1fr 50px;
@@ -135,8 +140,14 @@ header {
 
 /* Todo Lists */
 .list {
+    width: 85%;
+    margin-inline: auto;
     border: 5px solid green;
     border-radius: 5px;
+}
+
+.list+.list {
+    margin-top: 50px;
 }
 
 .list h3{
@@ -145,14 +156,14 @@ header {
     margin-bottom: 5px;
 }
 
-.future {
+#future {
     border-color: lime;
 }
     
-.current {
+#current {
     border-color: orange;
 }
-.past {
+#past {
     border-color: violet;
 }
 
@@ -183,13 +194,13 @@ header {
         }
 
 /* specific list item color*/
-.future .list-items li:nth-child(odd){
+#future .list-items li:nth-child(odd){
     background-color: rgba(0, 168, 0, 0.35);
 }
-.current .list-items li:nth-child(odd){
+#current .list-items li:nth-child(odd){
     background-color: rgba(255, 168, 0, 0.35);
 }
-.past .list-items li:nth-child(odd){
+#past .list-items li:nth-child(odd){
     background-color: rgba(140, 0, 255, 0.35);
 }
 
@@ -199,15 +210,15 @@ header {
     text-decoration: line-through;
 }
 
-.future li:has(input[type="checkbox"]:checked){
+#future li:has(input[type="checkbox"]:checked){
     background-color: rgb(255, 132, 0);
     animation: checkedout 0.5s linear 0.5s forwards;
 }
-.current li:has(input[type="checkbox"]:checked){
+#current li:has(input[type="checkbox"]:checked){
     background-color: violet;
     animation: checkedout 0.5s linear 0.5s forwards;
 }
-.past li:has(input[type="checkbox"]:checked){
+#past li:has(input[type="checkbox"]:checked){
     animation: checkedout 1.0s linear 0s forwards;
 }
 
@@ -265,3 +276,22 @@ footer{
     color: cyan;
 }
 
+@media screen and (min-width: 768px) {
+    #login {
+        display: flex;
+        margin-top: 0;
+        grid-row: 1/1;
+    }
+
+    #task-form{
+        width: 50%;
+    }
+
+    .list {
+        width: 100%;
+    }
+    
+    .list+.list {
+        margin-top: 0;
+    }
+}
