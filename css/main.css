@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* General Styling */
+:root {
+    --future: rgb(0, 255, 0);
+    --future-odd: rgba(0, 168, 0, 0.35);
+    --current: rgb(255, 166, 0);
+    --current-odd: rgba(255, 168, 0, 0.35);
+    --past: rgb(238, 130, 238);
+    --past-odd: rgba(140, 0, 255, 0.35);
+}
+
 body{
    margin: 0;
    padding: 0;
@@ -157,20 +166,22 @@ header {
 }
 
 #future {
-    border-color: lime;
+    border-color: var(--future);
 }
     
 #current {
-    border-color: orange;
+    border-color: var(--current);
 }
 #past {
-    border-color: violet;
+    border-color: var(--past);
 }
+
+
 
 .list-items {
     line-height: 30px;
     height: 265px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
     .list-items li {
         display: flex;
@@ -195,13 +206,13 @@ header {
 
 /* specific list item color*/
 #future .list-items li:nth-child(odd){
-    background-color: rgba(0, 168, 0, 0.35);
+    background-color: var(--future-odd);
 }
 #current .list-items li:nth-child(odd){
-    background-color: rgba(255, 168, 0, 0.35);
+    background-color: var(--current-odd);
 }
 #past .list-items li:nth-child(odd){
-    background-color: rgba(140, 0, 255, 0.35);
+    background-color: var(--past-odd);
 }
 
 
@@ -216,11 +227,11 @@ header {
 }
 
 #future li:has(input[type="checkbox"]:checked){
-    background-color: rgb(255, 132, 0);
+    background-color: var(--current);
     animation: checkedout 0.5s linear 0.5s forwards;
 }
 #current li:has(input[type="checkbox"]:checked){
-    background-color: violet;
+    background-color: var(--past);
     animation: checkedout 0.5s linear 0.5s forwards;
 }
 #past li:has(input[type="checkbox"]:checked){
