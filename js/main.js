@@ -40,6 +40,6 @@ function moveItem(e,index) {
 
 lists.forEach((list, index) => {
     list.addEventListener("animationend", moveItem(e,index))
-};
+});
 
 
