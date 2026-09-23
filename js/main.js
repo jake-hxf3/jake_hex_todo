@@ -3,11 +3,12 @@ const searchBox = document.querySelector("#task-form");
 const lists = document.querySelectorAll(".list-items");
 const temp = document.querySelector("template");
 
+const searchBar = document.querySelector("#task");
+
 let taskIndex = 0;
 
 
 function addItem() {
-    let searchBar = document.querySelector("#task");
     let taskName = searchBar.value;
 
     taskIndex++;
