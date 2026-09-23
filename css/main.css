@@ -170,7 +170,7 @@ header {
 .list-items {
     line-height: 30px;
     height: 265px;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
     .list-items li {
         display: flex;
