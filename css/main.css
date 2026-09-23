@@ -206,8 +206,13 @@ header {
 
 
 /* checked states of list */
+.list-items input[type="checkbox"]:checked {
+    pointer-events: none;
+}
+
 .list-items input[type="checkbox"]:checked + label {
     text-decoration: line-through;
+    pointer-events: none;
 }
 
 #future li:has(input[type="checkbox"]:checked){
