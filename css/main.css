@@ -204,6 +204,11 @@ header {
             color: rgb(182, 255, 255);
         }
 
+.list-items li button {
+    padding: 0;
+    border: 0;
+}
+
 /* specific list item color*/
 #future .list-items li:nth-child(odd){
     background-color: var(--future-odd);
@@ -266,6 +271,10 @@ header {
     }
 }
 
+.list-items li.hide {
+    visibility: hidden;
+}
+
 /* Footer */
 footer{
     background-color: mediumslateblue;
@@ -290,10 +299,6 @@ footer{
 
 .sm-icons a:hover{
     color: cyan;
-}
-
-li.hide {
-    visibility: hidden;
 }
 
 
