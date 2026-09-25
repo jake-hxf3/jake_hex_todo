@@ -249,6 +249,9 @@ header {
     animation: checkedout 1.0s linear 0s forwards;
 }
 
+.list-items li:has(input[type="checkbox"]:checked) button {
+    display: none;
+}
 
 .list-items li:has(input[type="checkbox"]:checked)::after {
     display: block;
