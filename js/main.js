@@ -84,6 +84,8 @@ function markDeletedItem(e) {
     if (e.target.tagName === "BUTTON") {
         deletedItem = e.target.closest("li");
         e.target.style.display = "none";
+        let checkbox = e.target.querySelector("input");
+        checkbox.checked = true;
     }
 }
 
