@@ -207,6 +207,11 @@ header {
 .list-items li button {
     padding: 0;
     border: 0;
+    display: none;
+}
+
+.list-items li:hover button {
+    display: block
 }
 
 /* specific list item color*/
