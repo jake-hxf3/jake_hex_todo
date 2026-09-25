@@ -7,6 +7,7 @@ const searchBar = document.querySelector("#task");
 
 let taskIndex = 0;
 let currentItem = null;
+let deletedItem = null;
 
 
 function addItem() {
@@ -27,6 +28,11 @@ function addItem() {
 }
 
 function moveItem(e,index) {
+    if (e.target === deletedItem) {
+        e.target.remove();
+        return;
+    }
+    
     if (e.target.tagName === "LI") {
         let checkbox = e.target.querySelector("input");
         if (checkbox.checked === true) {
@@ -74,6 +80,13 @@ function swapPos(e, list) {
     }
 }
 
+function markDeletedItem(e) {
+    if (e.target.tagName === "BUTTON") {
+        deletedItem = e.target.closest("li");
+        e.target.style.display = "none";
+    }
+}
+
 lists.forEach((list, index) => {
     list.addEventListener("animationend", (e) => {
         moveItem(e,index);
@@ -89,6 +102,10 @@ lists.forEach((list, index) => {
 
     list.addEventListener("dragenter", (e) => {
         swapPos(e, list);
+    })
+
+    list.addEventListener("click", (e) => {
+        markDeletedItem(e);
     })
 });
 
