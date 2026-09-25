@@ -40,7 +40,7 @@ h2 {
     margin-bottom: 8px;
 }
 
-ol {
+ol, ul {
     list-style: none;
     padding-left: 0px;
     margin: 0;
@@ -291,6 +291,11 @@ footer{
 .sm-icons a:hover{
     color: cyan;
 }
+
+li.hide {
+    visibility: hidden;
+}
+
 
 @media screen and (min-width: 768px) {
     #login {
