@@ -46,23 +46,23 @@
       <h2 class="hidden">The Sorted To Do Lists</h2>
       <section class="list col-span-4" id="future">
         <h3>🔜 Future Tasks</h3>
-        <ul class="list-items">
+        <ol class="list-items">
 
-        </ul>
+        </ol>
       </section>
 
       <section class="list col-span-4" id="current">
-        <h3>👨‍💻 In Progress</h3>
-        <ul class="list-items">
+        <h3>👾 In Progress</h3>
+        <ol class="list-items">
 
-        </ul>
+        </ol>
       </section>
       
       <section class="list col-span-4" id="past">
         <h3>⏪ Completed!</h3>
-        <ul class="list-items">
+        <ol class="list-items">
 
-        </ul>
+        </ol>
       </section>
     </section>
   </main>
@@ -88,7 +88,7 @@
   </footer>
 
   <template>
-    <li>
+    <li draggable="true">
       <input type="checkbox" id="ld-01">
       <label for="ld-01">To-do1</label>
     </li>
