@@ -59,6 +59,7 @@ function swapPos(e, list) {
     if (!list.contains(currentItem)) return;
         
     let nextItem = e.target.closest("li");
+    if (!nextItem) return;
     if (nextItem === currentItem) return;
 
     let itemList = Array.prototype.slice.call(list.children);
