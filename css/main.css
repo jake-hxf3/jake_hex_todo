@@ -209,6 +209,7 @@ header {
     border: 0;
     background-color: transparent;
     display: none;
+    cursor: pointer;
 }
 
 .list-items li:hover button {
