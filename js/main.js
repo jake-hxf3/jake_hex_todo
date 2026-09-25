@@ -56,6 +56,8 @@ function stopDrag(e) {
 
 function swapPos(e, list) {
     //e.preventDefault();
+    if (!list.contains(currentItem)) return;
+        
     let nextItem = e.target.closest("li");
     if (nextItem === currentItem) return;
 
