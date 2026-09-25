@@ -212,7 +212,7 @@ header {
 }
 
 .list-items li:hover button {
-    display: block
+    display: block;
 }
 
 /* specific list item color*/
