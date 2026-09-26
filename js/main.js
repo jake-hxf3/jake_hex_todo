@@ -100,12 +100,12 @@ lists.forEach((list, index) => {
     list.addEventListener("drop", (e) => {
         e.preventDefault();
         e.stopPropagation();
-    }
+    })
 
     list.addEventListener("dragover", (e) => {
         e.preventDefault();
         e.stopPropagation();
-    }
+    })
 
     list.addEventListener("dragenter", (e) => {
         swapPos(e, list);
