@@ -22,6 +22,7 @@ function addItem() {
     listItem.querySelector("label").textContent = taskName;
 
     lists[0].appendChild(listItem);
+    searchBar.value = "";
 
     console.log("an item was added");
 }
