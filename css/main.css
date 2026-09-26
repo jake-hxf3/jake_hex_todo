@@ -224,6 +224,10 @@ header {
     display: block;
 }
 
+.list-items li label:active ~ button {
+    display: none;
+}
+
 .list-items li span {
     cursor: move;
     margin-inline: 0.5rem;
