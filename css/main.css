@@ -204,11 +204,11 @@ header {
         .list-items li:hover {
             color: rgb(182, 255, 255);
         }
-        .list-items li:hover:active {
+        .list-items li label:hover:active {
             cursor: move;
         }    
 
-.list-items:has(li:hover:active) {
+.list-items:has(li label:hover:active) {
     cursor: move;
 }
 
@@ -226,6 +226,7 @@ header {
 
 .list-items li span {
     cursor: move;
+    margin-inline: 0.5rem;
 }
 
 .list-items li span svg {
@@ -246,6 +247,9 @@ header {
     background-color: var(--past-odd);
 }
 
+#past .list-items li button{
+    display: none;
+}
 
 /* checked states of list */
 .list-items input[type="checkbox"]:checked {
