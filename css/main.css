@@ -199,10 +199,18 @@ header {
             display: block;
             margin-left: 5px;
             width: 100%;
+            overflow-x: hidden;
         }
         .list-items li:hover {
             color: rgb(182, 255, 255);
         }
+        .list-items li:hover:active {
+            cursor: move;
+        }    
+
+.list-items:has(li:hover:active) {
+    cursor: move;
+}
 
 .list-items li button {
     padding: 0;
@@ -224,6 +232,7 @@ header {
     color: white;
     width: 1rem;
     height: 1rem;
+    padding-inline: 4px;
 }
 
 /* specific list item color*/
