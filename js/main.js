@@ -43,7 +43,7 @@ function moveItem(e,index) {
 function startDrag(e) {
     if (e.target.tagName === "LI") {
         //currentItem = e.target.closest("LI");        
-        currentItem = e.target'
+        currentItem = e.target;
         setTimeout(currentItem.classList.add("hide"),0);
 
         //e.dataTransfer.setData('text', currentItem.firstElementChild.id);
