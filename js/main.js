@@ -41,9 +41,9 @@ function moveItem(e,index) {
 }
 
 function startDrag(e) {
-    if (e.target.tagName === "SPAN") {
-        currentItem = e.target.closest("LI");
-        if (!currentItem) return;
+    if (e.target.tagName === "LI") {
+        //currentItem = e.target.closest("LI");        
+        currentItem = e.target'
         setTimeout(currentItem.classList.add("hide"),0);
 
         //e.dataTransfer.setData('text', currentItem.firstElementChild.id);
@@ -97,14 +97,8 @@ lists.forEach((list, index) => {
         stopDrag(e);
     })
 
-    list.addEventListener("drop", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-    })
-
     list.addEventListener("dragover", (e) => {
         e.preventDefault();
-        e.stopPropagation();
     })
 
     list.addEventListener("dragenter", (e) => {
