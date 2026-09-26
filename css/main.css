@@ -216,6 +216,15 @@ header {
     display: block;
 }
 
+.list-items li span {
+    cursor: move;
+}
+
+.list-items li span svg {
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
 /* specific list item color*/
 #future .list-items li:nth-child(odd){
     background-color: var(--future-odd);
@@ -250,8 +259,10 @@ header {
     animation: checkedout 1.0s linear 0s forwards;
 }
 
-.list-items li:has(input[type="checkbox"]:checked) button {
-    display: none;
+.list-items li:has(input[type="checkbox"]:checked) {
+    button, span {
+        display: none;
+    }
 }
 
 .list-items li:has(input[type="checkbox"]:checked)::after {
