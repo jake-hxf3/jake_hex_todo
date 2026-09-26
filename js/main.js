@@ -41,11 +41,12 @@ function moveItem(e,index) {
 }
 
 function startDrag(e) {
-    if (e.target.tagName === "LI") {
-        currentItem = e.target;
+    if (e.target.tagName === "SPAN") {
+        currentItem = e.target.closest("LI");
+        if (!currentItem) return;
         setTimeout(currentItem.classList.add("hide"),0);
-        //console.log(currentItem);
-        //e.dataTransfer.setData('text', e.target.firstElementChild.id);
+
+        //e.dataTransfer.setData('text', currentItem.firstElementChild.id);
         //console.log(e.dataTransfer.getData('text'));
     }
 }
@@ -95,6 +96,16 @@ lists.forEach((list, index) => {
     list.addEventListener("dragend", (e) => {
         stopDrag(e);
     })
+
+    list.addEventListener("drop", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    list.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+    }
 
     list.addEventListener("dragenter", (e) => {
         swapPos(e, list);
