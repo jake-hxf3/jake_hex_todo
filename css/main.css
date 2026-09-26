@@ -199,7 +199,7 @@ header {
             display: block;
             margin-left: 5px;
             width: 100%;
-            overflow-x: hidden;
+            overflow: hidden;
         }
         .list-items li:hover {
             color: rgb(182, 255, 255);
